@@ -1,0 +1,426 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 13, 2022, 3:15:58 PM
+    Author     : lenovo
+*/
+
+/*Insérer les nouvelles balises html5 de type block*/
+
+/*inserer les nouvelles  balises html5 qui ont la proprièté de type display bloc qui sont spécifique au html5 dans notre fichier de style css3 */
+abbr,article,aside,audio,canvas,datalist,details,figure,dialog,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video {display:block;}
+/*réalisation d'un arrière plan gris pour le body */
+
+/*les régles de style de la balise conteneur*/
+#conteneur{
+    width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+body{
+    background-color: #48435C;
+    /*ajouter dégradé pour les navigateur safari et chrom  firefox et opéra */
+    /*background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#dddddd),to(#ffffff));
+    background: -moz-linear-gradient(top, #dddddd 0%, #ffffff 100%);*/
+    margin: 0;
+    font-family: "Trebuchet MS",Arial, Helvitica, sans-serif;
+    font-size: 14px;
+}
+/* afficher notre dégradé sur l'ensemble de la page */
+body, html{
+    height: 100%;
+    min-height: 100%;
+}
+
+/* placer tous les élémént du menu ul li en float left 
+nav ul li{
+    float: left;
+}
+
+/* spécifier les propriètés de l'élément ul 
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 960px;
+    height: 40px;
+    
+    background-image: url(images/degrade-menu.jpg); /* degrade pour navigateur opéra
+    background-color: #ddd;
+    /*ajouter dégradé pour les navigateur safari et chrom  firefox et opéra 
+    background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#dddddd),to(#ffffff));
+    background: -moz-linear-gradient(top, #dddddd 0%, #ffffff 100%);
+}
+
+/*les propriétes des classes menu permette d'alignet le texte de définir que cette élément est un bloc de lui donner une taille puis une bordure vers la droite'
+.cellules{
+    text-align: center;
+    line-height: 40px;
+    display: block;
+    width: 159px;
+    border-right: solid 1px #999;
+    color: #666;
+    text-decoration: none;
+}
+
+.cellule_d{
+    border: none;
+}
+*/
+
+/* debut du traitement du menu horizontal */
+
+/* le sous menu #hmenu est compris a l'interieur du menu principale #hmenu */
+
+#hmenu, #hmenu ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    float: left;
+    transition: 0.2s ease;
+}
+
+/* traitement de la balise li en ligne de block est la position il est relative */
+
+#hmenu li{
+    display: inline-block;
+    position: relative;
+    transition: 0.2s ease;
+}
+
+/* la propriete inherit permet au deux balises ul et li d'heriter les memes caracteristiques du  */
+#hmenu ul li{
+    display: inherit;
+    transition: 0.2s ease;
+}
+
+/* Traitement de la balise ul avec le z-index permet de superposer les sous menus a l'interieur du menu principale en ce qui concerne les mesures du z-index en peut aller de 0 jusqu'a 2000 3000 ... Selon la complixite des sous-menus */ 
+
+#hmenu ul{
+    position: absolute;
+    z-index: 1000;
+    max-height: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+/* le hover de ul a l'interieur de la balise qui permet de recadrer le menu principal horizentalement en inline-block */
+
+#hmenu li:hover ul{
+    max-height: 15em;
+}
+/* fin traitement des listes non ordonnees */
+
+/* traitement des liens href */
+
+#hmenu a{
+    text-decoration: none;
+    display: block;
+    padding: 8px 32px;
+    font-family: verdana;
+    color: blue;
+    transition: 0.2s ease;
+}
+
+/* traitement des liens ul au niveau de l'ancre */
+#hmenu ul a{
+    padding: 8px 0;
+    transition: 0.2s ease;
+}
+/* mettre la couleur rouge lors de le hover de li et laisser le text herite les proprietes du ul principales */
+#hmenu li:hover li a{
+    color: red;
+    text-transform: inherit;
+}
+
+/* au niveau de la derniere instruction on applique une couleur noir au niveau du menu principale est de sous menu */
+
+#hmenu li:hover a,#hmenu li li:hover a{
+    color: #000;
+}
+/* modification du menu general */
+#hmenu{
+    margin-bottom: 20px;
+    width: 960px;
+    text-align: center;
+}
+
+/* fin du traitement du menu horizontal */
+
+/*regle de style pour la balise section*/
+section{
+    float: left;
+}
+
+/* propriété de la balise aside */
+aside{
+    float: right;
+    width: 280px;
+    height: 365px;
+    padding: 20px;
+    
+}
+
+/* realisation de la partie article */
+article{
+    width: 600px;
+    height: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* arrière plan sur l'ensembles de la partie gauche et droite '*/
+aside, article, footer, nav ul{
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    
+    -moz-box-shadow:4px 4px 5px #999;
+    -webkit-box-shadow:4px 4px 5px #999;
+    -o-box-shadow:4px 4px 5px #999;
+    box-shadow:4px 4px 5px #999;
+    background: #fff;
+}
+
+nav{
+    margin: 20px 0;
+}
+
+/*annuler l'élément flottant '*/
+.annule{
+    clear: both;
+}
+
+/* element du footer*/
+footer#bas{
+    padding: 2px;
+    margin-top: 20px;
+}
+
+/*la partie slider */
+#slider{
+    margin-top: 40px;
+}
+#img{
+    width: 960px;
+    height: 300px;
+    border-radius: 15px;
+}
+#btn_left{
+    height:550px;
+    width:200px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    border-radius: 15px;
+}
+.left{
+    width: 60px;
+    height: 60px;
+    top: 22%;
+    left: 230px;
+    position: absolute;
+    opacity: 0.3;
+}
+
+#btn_right{
+    height:550px;
+    width:200px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    border-radius: 15px;
+}
+.right{
+    width: 60px;
+    height: 60px;
+    top: 22%;
+    right: -991px;
+    position: absolute;
+    opacity: 0.3;
+
+}
+.left:hover{
+    opacity: 1;
+    
+}
+.right:hover{
+    opacity: 1;
+}
+
+.cellules:hover{
+    color: white;
+    background-color: 	#871F78;
+    font-weight: bold;
+    border: none;
+}
+
+/* applique des prprièté la classe titre entete */
+.titre-entete{
+    text-align: center;
+    background-color: #61E786;
+    position: relative;
+    top: 50%;
+    color:white;
+    padding: 10px;
+    animation: animer 6s infinite;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+
+
+
+  #tg{
+      animation:animate 6s infinite;
+      padding: 5px;
+      width: 400px;
+      text-align: center;
+      margin-bottom: 10px;
+  }
+  
+
+  
+  /*appliquer proprièté pour réseau sociaux*/
+  #rs{
+      text-align: center;
+      position: relative;
+      padding: 5px;
+      line-height: normal;
+  }
+  .sociaux{
+      margin: 5px;
+      width: 30px;
+      height: 30px;
+      position: relative;
+   }
+  /* traitement de l'image'*/
+  .colonne{
+           position: relative;
+           float: left;
+           width: 30%;
+           min-height: 200px;
+           text-align: center;
+           margin: 5px;
+           padding: 5px;
+       }
+       .image{
+           opacity: 1;
+           display: block;
+           width: 95%;
+           height: 100px;
+           transition: 0.5s ease;
+           backface-visibility: hidden;
+       }
+       .middle{
+           transition: 0.5s ease;
+           opacity: 0;
+           position: absolute;
+           top: 30%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+       }
+       .text{
+           position: relative;
+           background:#e6e8ff;
+           color:black;
+           font-size: 16px;
+           padding: 4px 8px;
+           cursor: pointer;
+          }
+          
+/* dimunier l'opacity de l'image lorsque il y a le hover */
+
+.colonne:hover .image{
+    opacity: 0.2;
+}
+
+/* augmenter l'opacity de l'image lorsque il y a le hover */
+
+.colonne:hover .middle{
+    opacity: 0.5;
+}
+
+.aside2{
+    margin-top: 35px;
+}
+
+h3{
+    font-family: andalus;
+    background: #d19275;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 175px;
+    text-align: center;
+    color: white;
+
+}
+
+/* appliquer le hover visited et active sur le titre h2 */
+h2 a:hover{
+    color: yellow;
+}
+h2 a:visited{
+    color: green;
+}
+h2 a:active{
+    color: red;
+}
+
+#bas{
+    text-align: center;
+    background: #2F2F4f;
+    clear: left;
+    margin-top: auto;
+    color: #fff;
+    margin-bottom: 300px;
+}
+
+#valider{
+    height: 40px;
+    margin-left: 10px;
+    background-color: #61E786;
+    border: none;
+    color: #48435C;
+    width: 100px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    font-family: poppins;
+}
+#valider:hover{
+    background-color: #EDFFEC;
+    color: #48435C;
+}
+input{
+    height: 40px;
+    border: none;
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+}
+label{
+    color: white;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#verified{
+    height: 40px;
+    font-size: 45px;
+    color: #61E786;
+    display: inline;
+    border-radius: 15px;
+    transition: 0.2s ease;
+    margin-top: 0;
+    
+    position: absolute;
+    margin-left: 5px;
+}
+#verified:hover{
+    color: #EDFFEC;
+    
+}
