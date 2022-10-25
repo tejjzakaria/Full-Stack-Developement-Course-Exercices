@@ -2,12 +2,97 @@ p{
     color: blue;
 }
 
-/* la largeur de l'ecran est strictement inferieure ou egale 1240px */
-
+/*
+- la largeur de l'ecran est strictement inferieure ou egale 1240px 
+- le media query permet de faire des transformations au niveau responsive parmi les media nous avons screen-all-print-tv-projection-les smartphones- les iphones...
+- le and est un test conditionel sur la largeur de l'ecran
+- entre parentheses nous avons la condition en propriete 
+- a l'interieur du media query on peut appliquer des proprietes css de transformation 
+- Remarque : pour notre site nous allons le soumettre sous CLOUD9 IDE 
+*/
+/*
 @media screen and (max-width:1240px){
     p{
         color: red;
         background-color: #000;
         font-size: 1.5em;
     }
+}
+*/
+
+body{
+    background-color: red;
+}
+
+@media screen and (max-width: 740px){
+    body p{
+        background-color: red;
+        color: #fff;
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (min-width: 739px){
+    body p{
+        background-color: greenyellow;
+        color: red;
+        font-weight: bolder;
+    }
+}
+
+h2{
+    font-size: 2em;
+    font-family: Poppins;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+hr{
+    width: 20%;
+    color: #fff;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+
+td{
+    font-family: Poppins;
+    color: #fff;
+    display: block;
+}
+
+input{
+    height: 30px;
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    font-family: Poppins;
+}
+
+#sub1{
+    width: 420px;
+    margin-top: 20px;
+    height: 40px;
+    text-align: center;
+    font-family: Poppins;
+    color: grey;
+    transition: 0.2s ease;
+    margin-bottom: 40px;
+}
+
+#sub1:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+fieldset{
+    color: #fff;
+    font-family: Poppins;
+    margin: 10px;
 }
