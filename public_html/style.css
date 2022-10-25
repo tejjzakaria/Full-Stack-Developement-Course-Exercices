@@ -124,6 +124,7 @@ nav ul{
     font-family: verdana;
     color: blue;
     transition: 0.2s ease;
+    font-weight: bolder;
 }
 
 /* traitement des liens ul au niveau de l'ancre */
