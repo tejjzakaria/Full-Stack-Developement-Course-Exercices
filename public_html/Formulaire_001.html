@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire inscription</title>
+    <link href="Style_Formulaire_001.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- debut du formulaire -->
+    <form id="form1" method="post" action="">
+        <!-- le premier fieldset -->
+        <fieldset>
+            <legend>Administratif</legend>
+            <ol>
+                <li>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Votre Prenom et Nom" required>
+                    
+                </li>
+                <li>
+                    <label><input type="radio" id="civil" name="civil">Mr</label>
+                    <label><input type="radio" id="civil" name="civil">Mme</label>
+                    <label><input type="radio" id="civil" name="civil">Mlle</label>
+                </li>
+                <li>
+                    <label>E-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required>
+                </li>
+                <li>
+                    <label>Telephone :</label>
+                    <input type="tel" id="tel" name="tel" placeholder="00 00 00 00 00">
+                </li>
+                <li>
+                    <label>Adresse :</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Votre Adresse" required>
+                </li>
+                <li>
+                    <label>Code Postal :</label>
+                    <input type="text" id="cp" name="cp" placeholder="Votre code postal">
+                </li>
+                <li>
+                    <label>Ville :</label>
+                    <input type="text" id="ville" name="ville" placeholder="Votre ville">
+                </li>
+            </ol>
+        </fieldset>
+        <!-- le deuxieme fieldset -->
+        <fieldset>
+            <legend>Inscription Au Newsletter</legend>
+            <li>
+                <p>
+                    <label><input type="checkbox" id="news" name="corpo">News Corpo</label>
+                    <label><input type="checkbox" id="news" name="public">News Public</label>
+                    <label><input type="checkbox" id="news" name="finance">News Finance</label>
+                </p>
+            </li>
+            <li>
+                <label for="identifiant">Identifiant :</label>
+                <input type="number" id="identifiant" name="identifiant" placeholder="Votre identifiant" required>
+            </li>
+            <li>
+                <label for="pwd">Num Pwd :</label>
+                <input type="password" id="pwd" name="pwd" required>
+            </li>
+
+        </fieldset>
+        <!-- le troisieme fieldset -->
+        <fieldset>
+            <legend>Renseignement Complementaires</legend>
+            <li>
+                <label>Renseignements<textarea id="renseignement" name="renseignement"></textarea></label>
+            </li>
+        </fieldset>
+        <input type="submit" value="Inscrire" id="sub1">
+    </form>
+    
+</body>
+</html>
