@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://kit.fontawesome.com/7e60a3b0f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="form_style.css" type="text/css">
+</head>
+<body> 
+    <div class="container1">
+        <div class="box">
+            <ol>
+                    <h1>Administratif</h1>
+                <li class="wrapper2">
+                    <label><input type="radio" id="civil" name="civil">Mr</label>
+                    <label><input type="radio" id="civil" name="civil">Mme</label>
+                    <label><input type="radio" id="civil" name="civil">Mlle</label>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Votre Prenom et Nom" required>
+                </li>
+                
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Votre Email" required>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" id="tel" name="tel" placeholder="Votre Telephone">
+                </li>
+                <li>
+                    <i class="fa-solid fa-house-user"></i>
+                    <input type="text" id="text" name="text" placeholder="Votre Adresse">
+                </li>
+                <li>
+                    <i class="fa-solid fa-city"></i>
+                    <input type="text" id="ville" name="ville" placeholder="Votre Ville">
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="box">
+            <ol>
+                    <h1>Inscription Au Newsletter</h1>
+                
+                <li class="wrapper">
+                    <label><input type="checkbox" id="civil" name="civil">News Corpo</label>
+                    <label><input type="checkbox" id="civil" name="civil">News Public</label>
+                    <label><input type="checkbox" id="civil" name="civil">News Finance</label>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="number" id="identifiant" name="identifiant" placeholder="Votre Identifiant" required>
+                </li>
+                <li>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="pass" name="pass" placeholder="Votre Mot De Passe">
+                </li>
+                
+            </ol>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="box">
+            <ol>
+                    <h1>Renseignement Complementaires</h1>
+                <li>
+                    <textarea id="ren2" placeholder="Renseignements"></textarea>
+                </li>
+                
+                
+            </ol>
+        </div>
+    </div>
+    <div class="buttons">
+        <input type="button" value="Retour" id="sub2">
+        <input type="submit" value="S'inscrire" id="sub1">
+    </div>  
+</body>
+</html>
