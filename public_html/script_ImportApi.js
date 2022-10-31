@@ -9,6 +9,16 @@ async function get(){
     // declaration d'une deuxieme fonction data qui va recevoir les donnees de l'API
     const data = await response.json();
     console.log(data);
+
+    // declaration d'une map pour affichage des informations
+    data.map(function(api){
+        console.log(data.api);
+    })
+
+    document.querySelector("#content h3").innerHTML=data[2].name
+    document.querySelector("#content h4").innerHTML=data[2].birthday
+    document.querySelector("#content img").src=data[2].img
+
 }
 
 get();
